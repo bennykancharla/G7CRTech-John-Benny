@@ -1,0 +1,67 @@
+
+// Methods on /
+GET http://localhost:8000/api/users
+
+
+
+###
+
+
+POST http://localhost:8000/api/users/
+Content-Type: application/json
+
+{
+    "id": "erwin-smith-2",
+    "username": "Erwin Smith",
+    "password": "giveYourHearts"
+}
+
+
+
+###
+// Methods on :userId  
+
+
+GET http://localhost:8000/api/users/benny-kancharla
+
+###
+
+PUT  http://localhost:8000/api/users/erwin-smith
+
+
+###
+
+DELETE  http://localhost:8000/api/users/erwin-smith
+
+
+
+
+
+###
+//Methods on :userId/bookshelf
+
+GET http://localhost:8000/api/users/benny-kancharla/bookshelf
+
+
+###
+POST http://localhost:8000/api/users/benny-kancharla/bookshelf
+Content-Type: application/json
+
+{
+    "id": "erwin-smith-2",
+    "username": "Erwin Smith",
+    "password": "giveYourHearts",
+    "bookshelfStatus" : "wantToRead"
+}
+
+
+
+###
+
+POST  http://localhost:8000/api/users/token
+Content-Type: application/json
+
+{
+    "userId": "benny-kancharla",
+    "token": "1234567"
+}

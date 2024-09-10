@@ -1,0 +1,28 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test:watch": "mocha --watch",
+    "clear": "del node_modules /Q /F /S",
+    "build": "npm install",
+    "start": "node src/list-test.js",
+    "dev": "nodemon src/list-test.js",
+    "where:nodemon": "where nodemon",
+    "where:tsc": "where tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "mocha": "^10.7.3",
+    "nodemon": "^3.1.4"
+  }
+}

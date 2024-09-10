@@ -1,0 +1,16 @@
+{
+  "name": "basic-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "mocha",
+    "test:watch": "mocha --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "mocha": "^10.7.3"
+  }
+}

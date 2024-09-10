@@ -1,0 +1,105 @@
+.main-bg{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    
+}
+
+
+.top-half{
+    display: flex;
+    flex-direction: row;
+    width:40%;
+    align-items: center;
+}
+
+.num-buttons-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    margin: 50px;
+}
+
+.num-container{
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:60%;
+    margin: 50px;
+}
+
+.input-num{
+    height: 20px;
+    margin: 7px;
+}
+
+.airthematic-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.clear-reset-container{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ 
+    margin: 50px;   
+}
+
+#clear-btn{
+    margin: 5px;
+}
+
+.bottom-half{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.num-heading{
+    align-self: flex-start;
+
+}
+
+.num-refresh-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-of-nos{
+
+    border: 3px solid green;
+    padding: 30px;
+    width: 100%;
+    margin: 10px;
+}
+
+#result-container{
+    border: 3px solid blue;
+    padding: 30px;
+    width: 80%;
+    margin: 10px;
+
+}
+
+button{
+    color: aqua;
+    padding: 10px;
+    border: 0px;
+    border-radius: 6px;
+    background-color: rgb(78, 93, 112);
+}

@@ -1,0 +1,19 @@
+{
+  "name": "binary-search-algorithm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test",
+    "test:watch": "mocha --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "mocha": "^10.7.3"
+  }
+}

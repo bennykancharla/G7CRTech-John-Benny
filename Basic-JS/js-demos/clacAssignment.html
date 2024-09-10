@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+ 
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">Calculator</h1>
+        <fieldset>
+        <legend>First Number:</legend>
+        <input type="number" id="first-num" value="6" placeholder="Enter a Number"/>
+    </fieldset>
+    <fieldset>
+        <label for="dropdown">Operator:</label>
+        <select id="dropdown" name="operators" >
+                <option value="plus">Sum</option>
+                <option  value="minus">Subtract</option>
+                <option  value="multiply">Multiply</option>
+                <option  value="divide">Division</option>
+                <option  value="mod">Modulus</option>
+        </select>
+    </fieldset>
+       <fieldset>
+       <legend>Second Number:</legend>
+       <input type="number" id="second-num" value="5" placeholder="Enter a Number"/>
+    </fieldset>
+    <fieldset>
+        <legend>Format</legend>
+        <select id="format-dropdown" name="formaters">
+            <option value="onlyResult">Only Result</option>
+            <option value="withWords">Operator with Words</option>
+            <option value="withSymbols">Operator with Symbols</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Presenter</legend>
+        <select id="presenter-dropdown">
+            <option value="presentInHtml">In Page</option>
+            <option value="presentInConsole">In Console</option>
+            <option value="presentInAlert">In Alert</option>
+            <option value="presentInLocalStorage">In Local Storage</option>
+        </select>
+    </fieldset>
+
+    <button type="button" id="calculateBtn" onclick="onClickCalculate()">Calculate</button>
+    <fieldset id="result-container">
+        <legend>Result:</legend>
+        <h1 id="result-head"></h1>
+    </fieldset>
+    </div>
+    <script src="./sir.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<!-- <script type="text/javascript" src="jquery-3.3.1.js"></script> -->
+
+    <link rel="stylesheet" href="./calculator.css">
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Aggregate Calculator</title>
+
+</head>
+
+        <body>
+            <div class="main-bg">
+                <div class="top-half">
+                        <div class="num-buttons-container">
+                                <div class="num-container">
+                                    <h3 >Number:</h3>
+                                    <input id="num-input" class="input-num" type="number" placeholder="Enter a Number"  />
+                                    <button id="add-btn" type="button">Add</button>
+                                    
+                                </div>
+                                <div class="airthematic-container" >
+                                    <button id="sum-btn" type="button">Sum</button>
+                                    <button id="avg-btn" type="button">Average</button>
+                                    <button id="max-btn" type="button">Max</button>
+                                </div>
+                              
+                    </div>
+
+                    <div class="clear-reset-container">
+                        <button id="clear-btn" type="button">Clear</button>
+                        <button id="reset-btn" type="button">Reset</button>
+                    </div>
+        </div>
+
+
+                <div class="bottom-half">
+                <h3 class="num-heading">Numbers</h3> 
+                <div class="num-refresh-container">
+                    <ul id="list-of-nos">
+                  
+
+                    </ul>
+                <button id="refresh-btn" type="button">Refresh</button>
+                </div class="num-refresh-container">
+                
+                    <h3 class="num-heading">Console</h3>
+                    <div id="result-container"></div>
+                </div>
+
+                </div>
+            </div>
+            <script src="./calculator.js"></script>     
+           </body>
+</html>

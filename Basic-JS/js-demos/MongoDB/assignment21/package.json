@@ -1,0 +1,24 @@
+{
+    "name": "mongodb_demos",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "test": "mocha --watch",
+      "start": "node src/server",
+      "dev":"nodemon src/server.js",
+      "books-cli":"nodemon src/books-cli q"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": { 
+      "mongodb": "^6.8.0",
+      "prompt-sync": "^4.2.0"
+    },
+    "devDependencies": {
+      "chai": "^4.5.0",
+      "mocha": "^10.7.3",
+      "nodemon": "^3.1.4"
+    }
+  }

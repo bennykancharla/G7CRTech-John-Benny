@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book UI</title>
+    <link rel="stylesheet" href="bookUI.css">
+ 
+</head>
+
+<body onload="app.initialization()">
+
+    <div class="main-bg">
+        <div class="left-half-container">
+            <ul id="book-list-container" class="book-list-container">
+                
+            </ul>
+        </div>
+        <div class="right-half-container">
+            <form >
+                <div class="label-input-container">
+                <label for="id" >ID</label>
+                <input id="id" type="text" placeholder="Enter Book ID" />
+                </div>
+                <div class="label-input-container">
+                <label for="title" >Title</label>
+                <input id="title" type="text" placeholder="Enter Book Title" />
+            </div>
+            <div class="label-input-container">
+                <label for="author" >Author</label>
+                <input id="author" type="text" placeholder="Enter Author Name" />
+            </div>
+            <div class="label-input-container">
+                <label for="price" >Price</label>
+                <input id="price" type="text" placeholder="Enter Book Price"  />
+            </div>
+            <div class="label-input-container">
+                <label for="rating" >Rating</label>
+                <input id="rating" type="text"  placeholder="Enter Book Rating" />
+            </div>
+            <div class="label-input-container">
+                <label for="cover-url" >Cover URL</label>
+                <input id="cover-url" type="text"  placeholder="Enter Cover Page URL"/>
+            </div>
+               <div>
+                <button id="save" onclick="app.onSave()" type="button">Save</button>
+                <button id="delete" type="button">Delete</button>
+               </div>
+
+            </form>
+            <img src="" alt="Image Not Loaded" />
+        </div>
+    </div>
+
+    <script src="bookClass.js"></script>
+    <script src="bookIntialisation.js"></script>
+</body>
+
+</html>

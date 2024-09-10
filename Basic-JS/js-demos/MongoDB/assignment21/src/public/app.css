@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(221, 186, 140);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1{
+
+    color: rgb(3, 33, 134);
+}
+
+ul{
+list-style-type: none;
+height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+li{
+    font-size: 25px;
+    color: rgb(44, 2, 54);
+}
