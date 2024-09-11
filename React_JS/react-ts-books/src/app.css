@@ -17,6 +17,7 @@
 
   .screen{
     margin:10px;
+    padding-bottom: 50px;
   }
 
   .author-details{
@@ -24,4 +25,38 @@
     
     padding-left:5px;
    
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Additional styling */
+  }
+
+
+
+  .author-photo{
+    width:200px;
+    border:20px solid black;
+    padding:10px;
+    border-radius: 20px;
+    box-shadow: -2px -2px 2px gray;
+  }
+
+  fieldset{
+    border:1px solid gray !important;
+    padding:10px !important;
+  }
+
+  legend{
+    color:gray;
+    font-weight: bold;
+    margin-bottom: 10px !important;
+  }
+
+  .error-input{
+    /* border:1px solid red !important; */
+    background-color:lightpink !important;
   }

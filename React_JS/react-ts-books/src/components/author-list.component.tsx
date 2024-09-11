@@ -1,33 +1,25 @@
 import React from 'react';
+import { Author } from '../services/author';
 
-
-
-interface AuthorObjectProps {
-    _id?: string,
-    name?: string,
-    id?: string,
-    photo?: string,
-    biography?: string,
-    tags?: string[],
+interface AuthorListProps{
+    authors: any[],
+    onAuthorSelect: (author: Author|null) => void 
 }
 
+export const AuthorList=(props:AuthorListProps)=>{
 
-interface AuthorListProps {
-    authors: AuthorObjectProps[],
-    onAuthorSelect: (author?: AuthorObjectProps) => void
-}
+    
+   
 
-export const AuthorList = ({ authors, onAuthorSelect }: AuthorListProps) => {
 
     return (
-        <div className='list-group overflow-auto'>
-            {authors.map(author => (
-                <button key={author.id}
-                    onClick={() => onAuthorSelect(author)}
-                    className="list-group-item list-group-item-action"
-                >{author.name}</button>
+        <div className='list-group'>
+            {props.authors.map(author=>(
+              <button key={author.id} 
+              onClick={()=>props.onAuthorSelect(author)}
+              className="list-group-item list-group-item-action"
+              >{author.name}</button>
             ))}
-
         </div>
     )
 }
