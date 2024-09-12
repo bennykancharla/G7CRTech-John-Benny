@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { withFieldset } from '../../hocs/with-fieldset';
 import { LabeledInput } from '../../components/input.component';
 import { useUserContext } from '../../contexts/user.context';
-import { useNavigate } from 'react-router-dom';
+import { Status } from '../../components/status.component';
 
 
 export interface UserLoginScreenProps {
@@ -17,46 +17,51 @@ let UserLoginScreen = (props: UserLoginScreenProps) => {
         email:"vivek@conceptarchitect.in",
         password:"p@ss"
     });
-    const [errorMessage, setErrorMessage]=useState("");
-    const {userService,dispatch,loginUser} = useUserContext();
-    const navigate = useNavigate();
-
     const updateLoginInfo=(value:string,id:string)=>{
         setLoginInfo({...loginInfo,[id]:value})
     }
 
-    const handleLogin=async()=>{
-        setErrorMessage("");
-        console.log('loggin in ', loginInfo);
-        // const user = await userService.login(loginInfo.email,loginInfo.password);
-    //    console.log(loginUser);
-      
-    let  result = await loginUser(loginInfo)
-        // console.log(result);
-       if(result){
-        navigate('/');
-       }
-       else{
-        setErrorMessage("Invalid email or password");
-       }
-        // console.log('user', user);
-        // if(user){
-        //     console.log('logged in user', user);
-        //     // dispatch({type:"LOGIN",payload:user});
-        //     navigate('/');
-            
-        // }else{
-        //     // setErrorMessage("Invalid email or password");
-        // }
+
+    // const [errorMessage, setErrorMessage]=useState("");
+    // const [statusMessage,setStatusMessage]=useState("");
     
     
+    const{loginUser,user} = useUserContext();
+
+    console.log('In Login Component')
+    console.log('user',user);
+
+    
+    const handleLogin=()=>{
+        loginUser(loginInfo);   
     }
+    
+    
+    //const {userService,dispatch} = useUserContext();
+    // const handleLogin=async()=>{
+    //     setErrorMessage("");
+    //     console.log('loggin in ', loginInfo);
+    //     try{
+    //         setStatusMessage("validating...");
+    //         const user = await userService.login(loginInfo.email,loginInfo.password);
+    //         dispatch({type:"LOGIN",payload:user});
+    //         setStatusMessage(`welcome ${user.name}`);
+            
+    //     }catch(err:any){
+    //         setErrorMessage(err.message);
+    //         setStatusMessage("Login Failed");
+    //         console.error(err);
+    //     }      
+    
+    
+    // }
 
 
     return (
 
         <div className='UserLoginScreenComponent'>
             
+                <Status/>
                 <div className="row">
                     <div className="col-6">
                         
@@ -74,7 +79,7 @@ let UserLoginScreen = (props: UserLoginScreenProps) => {
                         className='btn btn-primary form-control'
                         onClick={handleLogin}
                         >Login</button>
-                        <p className='text-danger'>{errorMessage}</p>
+                        
                     </div>
 
                     <div className="col-6">

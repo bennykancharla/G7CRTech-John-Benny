@@ -5,13 +5,13 @@ import { ComponentType } from "react";
 
 
 
-export const withVisibility=(Component:any)=>{
+export const withVisibility=(Component:any, defaultVisibility=false)=>{
     return (props:any)=>{
         let visibility=props.visibility;
         if(visibility===undefined)
-            visibility=true;
+            visibility=defaultVisibility;
 
-        console.log('visisbility',visibility);
+        //('visisbility',visibility);
         if(!visibility){
            if(props.otherwise){
                return props.otherwise

@@ -14,7 +14,7 @@ export interface UserMenuProps{
 }
 
 const UserMenu = ({ user }:UserMenuProps) => {
-    console.log('in userMenu', user);
+    //console.log('in userMenu', user);
 
     const {dispatch} = useUserContext();
     const navigate = useNavigate();
@@ -63,7 +63,7 @@ export const GuestMenu = () => {
 export const Membership = (props: MembershipProps) => {
 
     let { user } = useUserContext();
-    console.log('in membership', user);
+    //console.log('in membership', user);
     if(user)
         return <UserMenu user={user} />
     else

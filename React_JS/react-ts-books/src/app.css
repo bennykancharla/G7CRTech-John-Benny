@@ -60,3 +60,7 @@
     /* border:1px solid red !important; */
     background-color:lightpink !important;
   }
+
+  .LoadingAnimationComponent img{
+    width:120px;
+  }

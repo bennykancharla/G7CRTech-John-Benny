@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { AuthorList } from '../../components/author-list.component';
 import { Author } from '../../services/author';
-import { Link } from 'react-router-dom';
 import { AuthorCard } from '../../components/author-card.component';
 import { useAuthorContext } from '../../contexts/author.context';
+import { LoadingAnimation } from '../../components/loading-animation.component';
+import { useStatusContext } from '../../contexts/status.context';
 
 
 export interface AuthorListScreenProps {
@@ -15,26 +15,14 @@ export interface AuthorListScreenProps {
 
 export const AuthorListScreen = () => {
 
-    //const authorService = new InMemoryAuthorService();
+    const {authors, getAllAuthors}= useAuthorContext();
+    const {status}=useStatusContext();
+    
+    //get all authors
+    useEffect(getAllAuthors,[]);
 
-    const authorService = useAuthorContext();
-
-    //const promise=authorService.getAllAuthors();
-
-    const [authors, setAuthors] = useState<Author[]>([]);
-
-    useEffect(() => {
-
-        authorService
-            .getAllAuthors()
-            .then(setAuthors);
-    }, []);
-
-    console.log('total authors:', authors.length);
-
-    if (authors.length === 0) {
-        return <h2>Loading...</h2>;
-    }
+    if(status.type ==='LOADING')
+        return <LoadingAnimation />;
 
     return (
 
@@ -45,7 +33,7 @@ export const AuthorListScreen = () => {
 
 
 
-                    authors.map((author) => (
+                    authors.map((author:Author) => (
                         <div key={author.id} className='col col-md-4'>
                             <AuthorCard author={author} />
                         </div>

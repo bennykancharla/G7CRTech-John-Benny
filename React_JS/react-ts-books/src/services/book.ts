@@ -1,6 +1,6 @@
 import {Review} from './review';
 
-export interface Author{
+export interface Book{
     id: string;
     title:string;
     cover:string;

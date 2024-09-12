@@ -7,5 +7,6 @@ export interface LoginInfo{
 export interface User extends LoginInfo{
     name:string;
     photo:string;
+    roles: string[]
 }
 
